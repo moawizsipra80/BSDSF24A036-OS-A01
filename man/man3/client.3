@@ -1,0 +1,31 @@
+.TH CLIENT 3 "2026-09-22" "1.0" "User Commands"
+.SH NAME
+client \- test program for libmyutils library
+.SH SYNOPSIS
+.B client
+.SH DESCRIPTION
+.B client
+is a driver program that tests the functions provided by
+.BR libmyutils .
+It tests both string functions and file functions.
+.SH FUNCTIONS TESTED
+.TP
+.B mystrlen
+Returns the length of a string.
+.TP
+.B mystrcpy
+Copies a string from source to destination.
+.TP
+.B mystrncpy
+Copies up to n characters from source to destination.
+.TP
+.B mystrcat
+Concatenates two strings.
+.TP
+.B wordCount
+Counts lines, words, and characters in a file.
+.TP
+.B mygrep
+Searches for a pattern in a file and returns matching lines.
+.SH AUTHOR
+Moawiz Sipra <moawizsipra80@example.com>

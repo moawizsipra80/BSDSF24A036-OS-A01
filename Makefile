@@ -40,6 +40,17 @@ clean:
 	rm -f $(OBJ_DIR)/*.o
 	rm -f $(BIN_DIR)/client_dynamic
 	rm -f $(LIBRARY)
+install: all
+	@echo "Installing client_dynamic, library, and man pages..."
+	install -d /usr/local/bin
+	install -m 755 $(BIN_DIR)/client_dynamic /usr/local/bin/client
+	install -d /usr/local/lib
+	install -m 644 $(LIB_DIR)/libmyutils.so /usr/local/lib/
+	install -d /usr/local/share/man/man3
+	install -m 644 man/man3/client.3 /usr/local/share/man/man3/
+	install -m 644 man/man3/libmyutils.3 /usr/local/share/man/man3/
+	ldconfig
+	@echo "Installation complete."
 
 run: all
 	LD_LIBRARY_PATH=$(LIB_DIR) ./$(TARGET)
