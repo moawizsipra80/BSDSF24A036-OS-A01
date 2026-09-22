@@ -1,0 +1,32 @@
+.TH LIBM YUTILS 3 "2026-09-22" "1.0" "Library Functions"
+.SH NAME
+libmyutils \- a utility library for string and file operations
+.SH SYNOPSIS
+.B #include <mystfunctions.h>
+.br
+.B #include <myfilefunctions.h>
+.SH DESCRIPTION
+.B libmyutils
+is a collection of utility functions for string manipulation
+and file operations.
+.SH FUNCTIONS
+.TP
+.B int mystrlen(const char *s)
+Returns the length of the string s.
+.TP
+.B int mystrcpy(char *dest, const char *src)
+Copies the string src to dest.
+.TP
+.B int mystrncpy(char *dest, const char *src, int n)
+Copies up to n characters from src to dest.
+.TP
+.B int mystrcat(char *dest, const char *src)
+Concatenates src to dest.
+.TP
+.B int wordCount(FILE *file, int *lines, int *words, int *chars)
+Counts lines, words, and characters in a file.
+.TP
+.B int mygrep(FILE *fp, const char *search_str, char **matches)
+Searches for search_str in file and fills matches array.
+.SH AUTHOR
+Moawiz Sipra <moawizsipra80@example.com>
